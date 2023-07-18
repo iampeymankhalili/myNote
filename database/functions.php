@@ -10,6 +10,16 @@ function emptyInputSignup($name, $email, $password, $re_password): bool
     return $result;
 
 }
+function emptyInputLogin($email, $password): bool
+{
+    $result = false;
+
+    if(empty($email) || empty($password)){
+        $result = true;
+    }
+    return $result;
+
+}
 
 function invalidEmail($email): bool
 {

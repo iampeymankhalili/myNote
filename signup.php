@@ -68,12 +68,12 @@
                                     <button type="submit" class="btn btn-primary d-inline-block mx-auto">Sign up
                                     </button>
                                 </div>
-                                <div class="input-group mt-3">
-                                    <p><em>Just put a character to login.</em></p>
-                                </div>
                             </form>
                             <div class="input-group mt-3">
                                 <p><em>Have account? <a href="login.php"> Login </a> please</em></p>
+                            </div>
+                            <div class="input-group mt-3">
+                                <p><em>Back to<a href="index.php"> Home </a>page</em></p>
                             </div>
                         </div>
                     </div>
@@ -83,6 +83,29 @@
 
     </div>
 </div>
+
+<?php
+    if(isset($_GET['error'])){
+        if($_GET['error'] == "emptyinput"){
+            echo '<p>Please complete inputs</p>';
+        }
+        elseif ($_GET['error'] == "invalidEmail"){
+            echo '<p>Please Enter valid Email</p>';
+        }
+        elseif ($_GET['error'] == "passworddonotmatch"){
+            echo '<p>Please Enter correct password</p>';
+        }
+        elseif ($_GET['error'] == "stmtfailed"){
+            echo '<p>Please try again</p>';
+        }
+        elseif ($_GET['error'] == "none"){
+            echo '<p>You have signed up successfully</p>';
+        }
+
+
+    }
+
+?>
 
 
 <script src="js/jquery-3.3.1.min.js"></script>

@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $password = $_POST["password"];
     $re_password = $_POST["re_password"];
 
-    if(emptyInputSignup($name, $email, $password, $re_password) !== false){
+    if(emptyInputSignup($name, $email, $password, $re_password)){
         header("location: ../signup.php?error=emptyinput");
     }
 

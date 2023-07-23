@@ -109,4 +109,29 @@ function loginUser($conn, $email, $password){
     }
 }
 
+function emptyInputNote($title, $text): bool
+{
+    $result = false;
+
+    if(empty($text) || empty($title)){
+        $result = true;
+    }
+    return $result;
+}
+
+function submitNote($conn, $title, $text, $user_id){
+    $sql = "INSERT INTO notes(title, text, user_id) VALUES (?, ?, ?)";
+    $stmt = mysqli_stmt_init($conn);
+    if(!mysqli_stmt_prepare($stmt, $sql)){
+        header("location: ../writenote.php?error=stmtfailed");
+        exit();
+    }
+
+    mysqli_stmt_bind_param($stmt, "sss", $title, $text, $user_id);
+    mysqli_stmt_execute($stmt);
+    mysqli_stmt_close($stmt);
+    header("location: ../writenote.php?error=none");
+    exit();
+}
+
 ?>

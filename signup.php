@@ -44,25 +44,25 @@
                                            class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Name</label>
                                     <input name="name" type="text"
                                            class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7"
-                                           id="username" value="admin" required>
+                                           id="username" placeholder="name" required>
                                 </div>
                                 <div class="input-group mt-3">
                                     <label for="email"
                                            class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Email</label>
                                     <input name="email" type="email"
                                            class="form-control validate col-xl-9 col-lg-8 col-md-8 col-sm-7"
-                                           id="username" value="admin" required>
+                                           id="username" placeholder="email" required>
                                 </div>
                                 <div class="input-group mt-3">
                                     <label for="password" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Password</label>
                                     <input name="password" type="password" class="form-control validate" id="password"
-                                           value="1234" required>
+                                           placeholder="****" required>
                                 </div>
                                 <div class="input-group mt-3">
                                     <label for="re_password" class="col-xl-4 col-lg-4 col-md-4 col-sm-5 col-form-label">Re-Password</label>
                                     <input name="re_password" type="password" class="form-control validate"
                                            id="password"
-                                           value="1234" required>
+                                           placeholder="****" required>
                                 </div>
                                 <div class="input-group mt-3">
                                     <button type="submit" class="btn btn-primary d-inline-block mx-auto">Sign up
